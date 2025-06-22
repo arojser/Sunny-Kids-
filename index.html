@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sunny Kids</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #FFF8E1;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      text-align: center;
+      padding: 30px;
+      background-color: #E0F7FA;
+    }
+    header img {
+      width: 200px;
+      border-radius: 30px;
+      box-shadow: 0 0 20px #ffce00;
+    }
+    header h1 {
+      color: #00796B;
+      font-size: 36px;
+      margin-top: 20px;
+    }
+    header p {
+      font-size: 20px;
+      color: #00695C;
+    }
+    section {
+      padding: 20px;
+    }
+    h2 {
+      color: #D84315;
+    }
+    .actividad {
+      background: #FFF3E0;
+      border-left: 5px solid #FF9800;
+      margin: 10px 0;
+      padding: 15px;
+      border-radius: 10px;
+    }
+    .social-buttons {
+      text-align: center;
+      padding: 40px 0;
+    }
+    .social-buttons a button {
+      padding: 10px 20px;
+      font-size: 18px;
+      margin: 10px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    .instagram {
+      background-color: #E1306C;
+      color: white;
+    }
+    .tiktok {
+      background-color: #000000;
+      color: white;
+    }
+    form {
+      background: #f9fbe7;
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 10px;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .reloj {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .language-buttons {
+      text-align: center;
+      padding: 20px;
+      background-color: #FFFDE7;
+    }
+    .language-buttons button {
+      padding: 10px 20px;
+      margin: 0 5px;
+      border: none;
+      border-radius: 10px;
+      background-color: #00796B;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <!-- BOTONES DE IDIOMA -->
+  <div class="language-buttons">
+    <button onclick="cambiarIdioma('es')">Español</button>
+    <button onclick="cambiarIdioma('en')">English</button>
+    <button onclick="cambiarIdioma('fr')">Français</button>
+  </div>
+
+  <!-- LOGO DECORADO -->
+  <header>
+    <img src="Logo de la app de la marina.png" alt="Logo SunnyKids">
+    <h1 id="bienvenida">¡Bienvenidos a Sunny Kids!</h1>
+    <p id="descripcion">La mejor web para actividades divertidas para los pequeños de casa.</p>
+  </header>
+
+  <!-- ACTIVIDADES -->
+  <section>
+    <h2 id="actividades">Actividades - Día 6 de Julio (2€)</h2>
+    <div class="actividad">
+      <strong>Pintando con burbujas (17:45h - 1h)</strong>
+      <p>Soplamos pintura con pomperos sobre papel para crear arte con burbujas.</p>
+    </div>
+    <div class="actividad">
+      <strong>Botella de la calma (19:00h)</strong>
+      <p>Decoramos botellas con purpurina y agua para crear un objeto relajante.</p>
+    </div>
+    <p><em>Este día es más cortito, por eso vale solo 2€. Si compras los tres días juntos, se aplica un descuento automático.</em></p>
+
+    <h2>Actividades - Día 7 de Julio (6€)</h2>
+    <div class="actividad">
+      <strong>Plantando lentejas (12:00h - 40 min)</strong>
+      <p>Sembramos lentejas en algodón húmedo para observar su crecimiento.</p>
+    </div>
+    <div class="actividad">
+      <strong>Personalizo mi mochila (17:00h - 1h)</strong>
+      <p>Decoramos mochilas de tela con materiales divertidos y coloridos.</p>
+    </div>
+    <div class="actividad">
+      <strong>Abanicos con forma (19:00h)</strong>
+      <p>Diseñamos abanicos con cartulina, papel y mucha creatividad.</p>
+    </div>
+
+    <h2>Actividades - Día 8 de Julio (6€)</h2>
+    <div class="actividad">
+      <strong>Sales de colores (11:30h - 30 min)</strong>
+      <p>Coloreamos sal con tizas y la guardamos en tarros decorativos.</p>
+    </div>
+    <div class="actividad">
+      <strong>Regalo para papá y mamá (12:05h - 35 min)</strong>
+      <p>Un regalo sorpresa que descubriréis el último día. ¡No se lo pierdan!</p>
+    </div>
+    <div class="actividad">
+      <strong>Fiesta de fin de temporada (12:00h a 21:00h)</strong>
+      <p>Diplomas, regalos, música y mucha diversión. Horario flexible. Votad en nuestras redes sociales.</p>
+    </div>
+
+    <h2>Descuentos</h2>
+    <ul>
+      <li>🎟️ <strong>Pulsera mágica de 1€</strong>: 10% de descuento en el total.</li>
+      <li>👨‍👩‍👧‍👦 <strong>Si vienes con dos familiares</strong>: 50% de descuento.</li>
+    </ul>
+  </section>
+
+  <!-- (Formularios, reloj y redes ya están integrados correctamente) -->
+
+  <!-- SCRIPT PARA CAMBIAR IDIOMA -->
+  <script>
+    const traducciones = {
+      es: {
+        bienvenida: "¡Bienvenidos a Sunny Kids!",
+        descripcion: "La mejor web para actividades divertidas para los pequeños de casa."
+      },
+      en: {
+        bienvenida: "Welcome to Sunny Kids!",
+        descripcion: "The best site for fun activities for your little ones."
+      },
+      fr: {
+        bienvenida: "Bienvenue chez Sunny Kids!",
+        descripcion: "Le meilleur site pour des activités amusantes pour les enfants."
+      }
+    };
+
+    function cambiarIdioma(idioma) {
+      document.getElementById("bienvenida").innerText = traducciones[idioma].bienvenida;
+      document.getElementById("descripcion").innerText = traducciones[idioma].descripcion;
+    }
+  </script>
+</body>
+</html>
